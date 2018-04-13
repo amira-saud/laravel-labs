@@ -20,7 +20,7 @@
 
 
 
-    <h1>Posts Data</h1>
+    <h1>Posts Data</h1> <a href="/posts/create" ><button>Create Post</button></a>
         <table class="table table-striped">
         <th><strong> Post Title </strong></th>
         <th><strong> Posted By </strong></th>
