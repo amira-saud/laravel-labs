@@ -35,11 +35,16 @@
 <td>    
 <a href="/posts/view/{{ $post->id }}" ><button class="btn-primary">View</button></a>
     <a href="/posts/edit/{{ $post->id }}" ><button class="btn-warning">Edit</button></a>
-        <a href="#"><button class="btn-danger">Delete</button></a>
+
+    <form action="/posts/delete/{{$post->id}}" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <button type="submit" class="btn btn-danger" onclick="return confirm('are you sure?')" value="Delete"/>Delete</button>
+            </form>
 
 @endforeach
 
         </tr>
         </table>
-
+        {{ $posts->links() }}
 @endsection

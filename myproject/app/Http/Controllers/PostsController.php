@@ -10,7 +10,8 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::paginate(2);
+      
         $post = $posts->first();
 
         return view('posts.index',[
@@ -53,12 +54,46 @@ class PostsController extends Controller
 
     public function edit($id)
     {
+        $users = User::all();
+
         if($id != " "){
            $post = Post::find($id);
            if ( $post){
-                return view('posts.edit',[ 'post' => $post ]);
+                return view('posts.edit',[ 'post' => $post , 'users' => $users]);
            }
         }
     }
+
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'title'        => 'required',
+            'description'      => 'required',
+        ]);
+        $users = User::all();
+
+        $post = Post::find($id);
+
+        $post->title= $request->input('title');
+        $post->description = $request->input('description');
+       $post->user_id = $request->input('user_id');
+       
+        $post->save();
+
+
+        return redirect()->route('posts.index');
+     }
+
+     public function destroy($id)
+     {
+         $post = Post::find( $id );
+ 
+         $post->delete();
+         
+         
+         return redirect()->route('posts.index');
+     }
+ 
+ 
 
 }

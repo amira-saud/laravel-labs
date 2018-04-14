@@ -3,18 +3,19 @@
 
 @section('content')
 <h1>post edit</h1>
-<form method="post" action="/posts">
+
+<form method="post" action="/posts/update/{{ $post->id}}">
 {{csrf_field()}}
-Title :- <input type="text" name="title">
+{{method_field('PUT')}}
+Title :- <input type="text" name="title" value="{{ $post->title }}">
 <br><br>
 Description :- 
-<textarea name="description"></textarea>
-<br>
+<textarea name="description"> {{$post->description}}</textarea>
 <br>
 Post Creator
-<select class="form-control" name="user_id">
+<select class="form-control" name="user_id" >
 @foreach ($users as $user)
-    <option value="{{$user->id}}">{{$user->name}}</option>
+    <option @if($user->id == $post->user->id) selected @endif value="{{$user->id}}">{{$user->name}}</option>
 @endforeach
 
 </select>

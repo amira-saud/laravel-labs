@@ -23,6 +23,10 @@ Route::get('posts/create','PostsController@create');
 
 Route::post('posts','PostsController@store');
 
-Route::put('posts/edit/{id}','PostsController@edit');
+Route::get('posts/edit/{id}','PostsController@edit');
+
+Route::put('posts/update/{id}','PostsController@update');
 
 Route::get('posts/view/{id}','PostsController@view');
+
+Route::delete('posts/delete/{id}','PostsController@destroy');
