@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use Illuminate\Http\Request;
 use App\User;
+use App\Http\Requests\StorePostRequest;
 
 class PostsController extends Controller
 {
@@ -29,7 +30,7 @@ class PostsController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
         // dd($request->all());
         Post::create([
@@ -64,7 +65,7 @@ class PostsController extends Controller
         }
     }
 
-    public function update(Request $request, $id)
+    public function update(StorePostRequest $request, $id)
     {
         $this->validate($request, [
             'title'        => 'required',
@@ -77,6 +78,8 @@ class PostsController extends Controller
         $post->title= $request->input('title');
         $post->description = $request->input('description');
        $post->user_id = $request->input('user_id');
+       
+       $validated = $request->validated();
        
         $post->save();
 
