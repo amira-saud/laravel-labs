@@ -1,0 +1,47 @@
+[33mcommit 329109a33d75a82004f5862b2870cf4ab177a5e1[m
+Author: Amira <miramiromiral@gmail.com>
+Date:   Sat Apr 14 16:33:57 2018 +0200
+
+     use the laravel navbar
+
+[33mcommit e84c4f0f43024b55a468091db78305d4704a2fb7[m
+Author: Amira <miramiromiral@gmail.com>
+Date:   Sat Apr 14 16:29:15 2018 +0200
+
+    prevent hacking and make auth
+
+[33mcommit cd6a84a392a6c9ad974318178ea3fc818975941c[m
+Author: Amira <miramiromiral@gmail.com>
+Date:   Sat Apr 14 15:40:45 2018 +0200
+
+    request storePostRequest and validation
+
+[33mcommit 435067f41a560743f38b6c4043eae458c8fb9faf[m
+Author: Amira <miramiromiral@gmail.com>
+Date:   Sat Apr 14 15:07:42 2018 +0200
+
+    edit post, delete post and pagination
+
+[33mcommit 4a2e0f57fc699ce4b9c70e176983a8e7b829999f[m
+Author: Amira <miramiromiral@gmail.com>
+Date:   Sat Apr 14 13:17:28 2018 +0200
+
+    view single post page
+
+[33mcommit d32cd9ad97c27bf7be5a534f0520ec6bc0c38fd8[m
+Author: Amira <miramiromiral@gmail.com>
+Date:   Sat Apr 14 00:38:36 2018 +0200
+
+    create post button
+
+[33mcommit e3342931543518b60862509401427bf5b80dda6a[m
+Author: Amira <miramiromiral@gmail.com>
+Date:   Sat Apr 14 00:33:44 2018 +0200
+
+    show data in table
+
+[33mcommit a76fb522858f11259590f73ad9d9f24352796037[m
+Author: Amira <miramiromiral@gmail.com>
+Date:   Fri Apr 13 23:39:19 2018 +0200
+
+    initialized project and now is equal to lectue
