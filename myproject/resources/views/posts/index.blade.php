@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 @section('content')
 <!--
 
@@ -20,7 +20,8 @@
 
 
 
-    <h1>Posts Data</h1> <a href="/posts/create" ><button class="btn-success">Create Post</button></a>
+    <h1>Posts Data</h1> <a href="/posts/create" >
+    <center><button class="btn-success">Create Post</button></a></center>
         <table class="table table-striped">
         <th><strong> Post Title </strong></th>
         <th><strong> Posted By </strong></th>
