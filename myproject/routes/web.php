@@ -20,4 +20,9 @@ Route::get(
     'PostsController@index'
 )->name('posts.index');
 Route::get('posts/create','PostsController@create');
+
 Route::post('posts','PostsController@store');
+
+Route::put('posts/edit/{id}','PostsController@edit');
+
+Route::get('posts/view/{id}','PostsController@view');

@@ -39,4 +39,26 @@ class PostsController extends Controller
         
        return redirect(route('posts.index')); 
     }
+
+
+    public function view($id)
+    {
+        if($id != " "){
+           $post = Post::find($id);
+           if ( $post){
+                return view('posts.view',[ 'post' => $post ]);
+           }
+        }
+    }
+
+    public function edit($id)
+    {
+        if($id != " "){
+           $post = Post::find($id);
+           if ( $post){
+                return view('posts.edit',[ 'post' => $post ]);
+           }
+        }
+    }
+
 }
