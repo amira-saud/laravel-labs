@@ -67,20 +67,15 @@ class PostsController extends Controller
 
     public function update(StorePostRequest $request, $id)
     {
-        $this->validate($request, [
-            'title'        => 'required',
-            'description'      => 'required',
-        ]);
+     
         $users = User::all();
 
         $post = Post::find($id);
 
         $post->title= $request->input('title');
         $post->description = $request->input('description');
-       $post->user_id = $request->input('user_id');
        
-       $validated = $request->validated();
-       
+     
         $post->save();
 
 
