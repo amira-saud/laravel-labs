@@ -26,13 +26,17 @@
         <th><strong> Post Title </strong></th>
         <th><strong> Posted By </strong></th>
         <th><strong> Created At </strong></th>
+        <th><strong> slug </strong></th>
+
         <th><strong> Actions </strong></th>
 
         @foreach ($posts as $post)
         <tr>
 <td> {{ $post->title }} </td>
-<td> {{ $post->user->name}} </td>s
+<td> {{ $post->user->name}} </td>
 <td> {{ date('M j, Y', strtotime( $post->created_at )) }} </td>
+<td> {{ $post->slug }} </td>
+
 <td>    
 <a href="/posts/view/{{ $post->id }}" ><button class="btn-primary">View</button></a>
     <a href="/posts/edit/{{ $post->id }}" ><button class="btn-warning">Edit</button></a>
