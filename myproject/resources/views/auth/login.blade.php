@@ -58,9 +58,15 @@
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
                                 </a>
+
                             </div>
                         </div>
                     </form>
+                    <a class="btn btn-link" href="login/github">
+                    <button class="btn btn-primary">
+                                    Login with git
+                                </button>
+                                </a>
                 </div>
             </div>
         </div>
